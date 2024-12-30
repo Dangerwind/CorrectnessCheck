@@ -5,7 +5,7 @@ import static hexlet.code.schemas.BaseSchema.nameOfTest.*;
 public class StringSchema extends BaseSchema<String> {
 
     public StringSchema required() {
-        addNewFunc(REQUIRED, (x) -> (x != null) && (!x.equals("")));
+        addNewFunc(REQUIRED, (x) -> (x != null) && (!x.isEmpty()));
         return this;
     }
     public StringSchema minLength(int imnLen) {

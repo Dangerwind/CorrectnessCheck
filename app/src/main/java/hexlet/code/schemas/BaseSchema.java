@@ -8,7 +8,7 @@ public class BaseSchema<T> {
 
     // все возможные ключи (названия) проверок
     public enum nameOfTest {
-        REQUIRED, MIN_LENGTH, CONTAINS, POSITIVE, RANGE
+        REQUIRED, MIN_LENGTH, CONTAINS, POSITIVE, RANGE, SIZEOF
     }
 
     //  в мэпу закидываем лямбды проверок

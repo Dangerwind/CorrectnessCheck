@@ -1,10 +1,12 @@
 package hexlet.code.schemas;
 
+import java.util.Objects;
+
 import static hexlet.code.schemas.BaseSchema.nameOfTest.*;
 
 public class NumberSchema extends BaseSchema<Integer> {
     public NumberSchema required() {
-        addNewFunc(REQUIRED, (x) -> (x != null));
+        addNewFunc(REQUIRED, Objects::nonNull);
         return this;
     }
     public NumberSchema positive() {
