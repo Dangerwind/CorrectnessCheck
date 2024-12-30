@@ -1,12 +1,10 @@
 package hexlet.code.schemas;
 
-import javax.sound.midi.Soundbank;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.function.Predicate;
 
-public class ShareData<T> {
+public class BaseSchema<T> {
 
     //  в мэпу закидываем лямбды проверок
     private Map<nameOfTest, Predicate<T>> mapOfTest = new LinkedHashMap<>();

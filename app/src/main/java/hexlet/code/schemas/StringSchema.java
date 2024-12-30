@@ -1,11 +1,8 @@
 package hexlet.code.schemas;
 
-import javax.sound.midi.Soundbank;
-import java.util.function.Predicate;
+import static hexlet.code.schemas.BaseSchema.nameOfTest.*;
 
-import static hexlet.code.schemas.ShareData.nameOfTest.*;
-
-public class StringSchema extends ShareData{
+public class StringSchema extends BaseSchema {
 
     public StringSchema required() {
         addNewFunc(REQUIRED, (x) -> (x != null) && (!x.equals("")));
