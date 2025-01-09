@@ -6,21 +6,23 @@ import java.util.function.Predicate;
 
 public class BaseSchema<T> {
 
-    // все возможные ключи (названия) проверок
+    // все возможные ключи проверок
     public enum nameOfTest {
-        REQUIRED, MIN_LENGTH, CONTAINS, POSITIVE, RANGE, SIZEOF
+        REQUIRED, MIN_LENGTH, CONTAINS, POSITIVE, RANGE, SIZEOF, SHAPE
     }
 
-    //  в мэпу закидываем лямбды проверок
+    //
     private Map<nameOfTest, Predicate<T>> mapOfTest = new LinkedHashMap<>();
 
+    //  в мэпу закидываем лямбды проверок
     public void addNewFunc(nameOfTest key, Predicate<T> value) {
         mapOfTest.put(key, value);
     }
 
-    public boolean isValid(Object testData) {
+    // проходим по всей мэпе, дергаем все лямбды с тестовым параметром
+    public boolean isValid(T testData) {
         for(Predicate<T> i : mapOfTest.values()) {
-            if (!i.test((T) testData)) {
+            if (!i.test(testData)) {
                 return false;
             }
         }

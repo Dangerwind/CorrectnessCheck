@@ -2,12 +2,15 @@ import hexlet.code.Validator;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
+import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class TestValidator {
+import hexlet.code.schemas.BaseSchema;
 
+public class TestValidator {
+//  String Tests ---------------------------
     @Test
     public void testStringStart() {
         var schema = new Validator().string();
@@ -43,6 +46,7 @@ public class TestValidator {
         assertTrue(schema.minLength(10).minLength(4).isValid("Hexlet"));
     }
 
+//  Numbers Tests ---------------------------
     @Test
     public void testNumbersStart() {
         var schema = new Validator().number();
@@ -74,7 +78,7 @@ public class TestValidator {
         assertFalse(schema.isValid(11));
     }
 
-
+//  Map Tests ---------------------------
     @Test
     public void testMapStart() {
         var schema = new Validator().map();
@@ -103,4 +107,31 @@ public class TestValidator {
         assertTrue(schema.isValid(data)); // true
     }
 
+//  Map Shape Tests ---------------------------
+    @Test
+    public void testMapShape() {
+        var v = new Validator();
+        var schema = v.map();
+
+        Map<String, BaseSchema<String>> schemas = new HashMap<>();
+        schemas.put("firstName", v.string().required());
+        schemas.put("lastName", v.string().required().minLength(2));
+
+        schema.shape(schemas);
+
+        Map<String, String> human1 = new HashMap<>();
+        human1.put("firstName", "John");
+        human1.put("lastName", "Smith");
+        assertTrue(schema.isValid(human1));
+
+        Map<String, String> human2 = new HashMap<>();
+        human2.put("firstName", "John");
+        human2.put("lastName", null);
+        assertFalse(schema.isValid(human2));
+
+        Map<String, String> human3 = new HashMap<>();
+        human3.put("firstName", "Anna");
+        human3.put("lastName", "B");
+        assertFalse(schema.isValid(human3));
+    }
 }
