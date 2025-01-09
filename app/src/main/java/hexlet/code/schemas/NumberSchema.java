@@ -10,7 +10,7 @@ public class NumberSchema extends BaseSchema<Integer> {
         return this;
     }
     public NumberSchema positive() {
-        addNewFunc(POSITIVE, (x) -> (x > 0) || (x != null) );
+        addNewFunc(POSITIVE, (x) -> (x > 0) || (x == null) );
         return this;
     }
     public NumberSchema range(int min, int max) {
