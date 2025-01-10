@@ -1,6 +1,8 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Dangerwind/java-project-78/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Dangerwind/java-project-78/actions)
 [![Java CI](https://github.com/Dangerwind/java-project-78/actions/workflows/main.yml/badge.svg)](https://github.com/Dangerwind/java-project-78/actions/workflows/main.yml) 
+[![Maintainability](https://api.codeclimate.com/v1/badges/db6e54e3c8b342efd107/maintainability)](https://codeclimate.com/github/Dangerwind/java-project-78/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/db6e54e3c8b342efd107/test_coverage)](https://codeclimate.com/github/Dangerwind/java-project-78/test_coverage)
 
 
 # Проект **"Валидатор данных"**
