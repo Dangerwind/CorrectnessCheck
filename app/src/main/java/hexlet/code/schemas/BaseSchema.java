@@ -15,12 +15,12 @@ public abstract class BaseSchema<T> {
     private final Map<NameOfTests, Predicate<T>> mapOfTest = new LinkedHashMap<>();
 
     //  в мэпу закидываем лямбды проверок
-    public void addNewFunc(NameOfTests key, Predicate<T> value) {
+    public final void addNewFunc(NameOfTests key, Predicate<T> value) {
         mapOfTest.put(key, value);
     }
 
     // проходим по всей мэпе, дергаем все лямбды с тестовым параметром
-    public boolean isValid(T testData) {
+    public final boolean isValid(T testData) {
         for (Predicate<T> i : mapOfTest.values()) {
             if (!i.test(testData)) {
                 return false;

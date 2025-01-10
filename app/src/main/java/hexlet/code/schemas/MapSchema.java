@@ -7,7 +7,7 @@ import static hexlet.code.schemas.BaseSchema.NameOfTests.REQUIRED;
 import static hexlet.code.schemas.BaseSchema.NameOfTests.SIZEOF;
 import static hexlet.code.schemas.BaseSchema.NameOfTests.SHAPE;
 
-public class MapSchema extends BaseSchema<Map> {
+public final class MapSchema extends BaseSchema<Map> {
 
     public MapSchema required() {
         addNewFunc(REQUIRED, Objects::nonNull);
