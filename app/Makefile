@@ -1,3 +1,4 @@
+
 .DEFAULT_GOAL := build-run
 
 setup:
@@ -22,5 +23,8 @@ checkstyleTest:
 	./gradlew checkstyleTest
 
 build-run: build run
+
+report:
+	./gradlew jacocoTestReport
 
 .PHONY: build
