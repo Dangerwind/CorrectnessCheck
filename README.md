@@ -113,7 +113,7 @@ data.put("key2", "value2");
 schema.isValid(data); // true
 ```
 
-Пример использования shape в MapSchema для вроженной валидации:
+Пример использования shape в MapSchema для вложенной валидации:
 ```
 import hexlet.code.Validator;
 import hexlet.code.schemas.MapSchema;
