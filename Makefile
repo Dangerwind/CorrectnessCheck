@@ -1,4 +1,3 @@
-
 run-dist:
 	make -C app run-dist
 
@@ -8,5 +7,7 @@ build:
 test:
 	make -C app test
 
+report:
+	make -C app report
 
 .PHONY: build
