@@ -2,12 +2,11 @@ package hexlet.code.schemas;
 
 import java.util.Objects;
 
-//import static hexlet.code.schemas.BaseSchema.NameOfTests.*;
 import static hexlet.code.schemas.BaseSchema.NameOfTests.REQUIRED;
 import static hexlet.code.schemas.BaseSchema.NameOfTests.POSITIVE;
 import static hexlet.code.schemas.BaseSchema.NameOfTests.RANGE;
 
-public class NumberSchema extends BaseSchema<Integer> {
+public final class NumberSchema extends BaseSchema<Integer> {
     public NumberSchema required() {
         addNewFunc(REQUIRED, Objects::nonNull);
         return this;

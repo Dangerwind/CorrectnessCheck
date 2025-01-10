@@ -1,13 +1,11 @@
 package hexlet.code.schemas;
 
-
 import java.util.Map;
 import java.util.Objects;
 
 import static hexlet.code.schemas.BaseSchema.NameOfTests.REQUIRED;
 import static hexlet.code.schemas.BaseSchema.NameOfTests.SIZEOF;
 import static hexlet.code.schemas.BaseSchema.NameOfTests.SHAPE;
-//import static hexlet.code.schemas.BaseSchema.nameOfTest.*;
 
 public class MapSchema extends BaseSchema<Map> {
 

@@ -4,7 +4,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.function.Predicate;
 
-public class BaseSchema<T> {
+public abstract class BaseSchema<T> {
 
     // все возможные ключи проверок
     public enum NameOfTests {
@@ -12,7 +12,7 @@ public class BaseSchema<T> {
     }
 
     //
-    private Map<NameOfTests, Predicate<T>> mapOfTest = new LinkedHashMap<>();
+    private final Map<NameOfTests, Predicate<T>> mapOfTest = new LinkedHashMap<>();
 
     //  в мэпу закидываем лямбды проверок
     public void addNewFunc(NameOfTests key, Predicate<T> value) {
