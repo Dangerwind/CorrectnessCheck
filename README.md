@@ -6,7 +6,7 @@
 Валидатор данных – библиотека, с помощью которой можно проверять корректность любых данных. Подобных библиотек множество в каждом языке, так как практически все программы работают с внешними данными, которые нужно проверять на корректность. В первую очередь речь идет про данные форм заполняемых пользователями. 
 
 Пример использования:
-'''
+```
 import hexlet.code.Validator;
 import hexlet.code.schemas.StringSchema;
 import hexlet.code.schemas.NumberSchema;
@@ -43,5 +43,5 @@ Map<String, Object> human2 = new HashMap<>();
 human2.put("firstName", "Anna");
 human2.put("lastName", "B");
 schema.isValid(human2); // false
-'''
+```
 
