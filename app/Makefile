@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/main
 .DEFAULT_GOAL := build-run
 
 setup:
@@ -27,10 +23,7 @@ checkstyleTest:
 
 build-run: build run
 
-<<<<<<< HEAD
-=======
 report:
 	./gradlew jacocoTestReport
 
->>>>>>> origin/main
 .PHONY: build
