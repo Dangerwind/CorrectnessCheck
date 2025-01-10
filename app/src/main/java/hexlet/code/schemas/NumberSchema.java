@@ -2,7 +2,10 @@ package hexlet.code.schemas;
 
 import java.util.Objects;
 
-import static hexlet.code.schemas.BaseSchema.nameOfTest.*;
+//import static hexlet.code.schemas.BaseSchema.NameOfTests.*;
+import static hexlet.code.schemas.BaseSchema.NameOfTests.REQUIRED;
+import static hexlet.code.schemas.BaseSchema.NameOfTests.POSITIVE;
+import static hexlet.code.schemas.BaseSchema.NameOfTests.RANGE;
 
 public class NumberSchema extends BaseSchema<Integer> {
     public NumberSchema required() {
@@ -10,7 +13,7 @@ public class NumberSchema extends BaseSchema<Integer> {
         return this;
     }
     public NumberSchema positive() {
-        addNewFunc(POSITIVE, (x) -> (x == null) || (x > 0) );
+        addNewFunc(POSITIVE, (x) -> (x == null) || (x > 0));
         return this;
     }
     public NumberSchema range(int min, int max) {

@@ -67,7 +67,7 @@ public class TestValidator {
         schema.positive();
         assertFalse(schema.isValid(-10));
         assertTrue(schema.isValid(10));
-        }
+    }
     @Test
     public void testNumbersRange() {
         var schema = new Validator().number();

@@ -1,6 +1,10 @@
 package hexlet.code.schemas;
 
-import static hexlet.code.schemas.BaseSchema.nameOfTest.*;
+import static hexlet.code.schemas.BaseSchema.NameOfTests.REQUIRED;
+import static hexlet.code.schemas.BaseSchema.NameOfTests.MIN_LENGTH;
+import static hexlet.code.schemas.BaseSchema.NameOfTests.CONTAINS;
+
+//import static hexlet.code.schemas.BaseSchema.nameOfTest.*;
 
 public class StringSchema extends BaseSchema<String> {
 
@@ -8,8 +12,8 @@ public class StringSchema extends BaseSchema<String> {
         addNewFunc(REQUIRED, (x) -> (x != null) && (!x.isEmpty()));
         return this;
     }
-    public StringSchema minLength(int imnLen) {
-            addNewFunc(MIN_LENGTH, (x) -> x.toString().length() >= imnLen);
+    public StringSchema minLength(int minLen) {
+        addNewFunc(MIN_LENGTH, (x) -> x.toString().length() >= minLen);
         return this;
     }
     public StringSchema contains(String contString) {
