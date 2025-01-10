@@ -1,4 +1,4 @@
-### Hexlet tests and linter status:
+**статусы проверок**
 [![Actions Status](https://github.com/Dangerwind/java-project-78/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Dangerwind/java-project-78/actions)
 [![Java CI](https://github.com/Dangerwind/java-project-78/actions/workflows/main.yml/badge.svg)](https://github.com/Dangerwind/java-project-78/actions/workflows/main.yml) 
 [![Maintainability](https://api.codeclimate.com/v1/badges/db6e54e3c8b342efd107/maintainability)](https://codeclimate.com/github/Dangerwind/java-project-78/maintainability)
@@ -10,7 +10,7 @@
 Валидатор данных – библиотека, с помощью которой можно проверять корректность любых данных. 
 Проверить можно числовые данные, строки и Map с проверкой структуры.
 
-| Название    | Проверка               | применимость        |
+| Название    | Проверка               | Применимость        |
 |:------------|:-----------------------|:--------------------|
 | required()  | на заполненность       | Number, String, Map |
 | minLength() | на минимальную длтинну | String, Map         |
